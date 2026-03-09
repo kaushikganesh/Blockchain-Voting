@@ -9,7 +9,7 @@ const Explorer = () => {
   useEffect(() => {
     const fetchBlocks = async () => {
       try {
-        const res = await fetch('http://localhost:5005/api/blockchain');
+        const res = await fetch('https://blockchain-voting-backend-ff3v.onrender.com/api/blockchain');
         const data = await res.json();
         setBlocks(data);
         setLoading(false);

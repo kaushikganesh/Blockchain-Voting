@@ -21,7 +21,7 @@ const Login = ({ setUser }) => {
     setError('');
     
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5005/api'}/auth/login`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL || "https://blockchain-voting-backend-ff3v.onrender.com"}/api/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ voterId, password })

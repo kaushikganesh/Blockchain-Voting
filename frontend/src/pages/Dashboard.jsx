@@ -35,7 +35,7 @@ const Dashboard = ({ user }) => {
 
   const fetchResults = async (electionId) => {
     try {
-      const res = await fetch(`http://localhost:5005/api/elections/${electionId}/results`);
+      const res = await fetch(`https://blockchain-voting-backend-ff3v.onrender.com/api/elections/${electionId}/results`);
       const data = await res.json();
       setLiveResults(data);
     } catch (err) {
